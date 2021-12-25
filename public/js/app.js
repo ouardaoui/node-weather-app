@@ -1,6 +1,6 @@
 // const axios = require("axios")
 const inputFun = (address, callback) => {
-  const url = "http://localhost:3000/weather?address=" + encodeURIComponent(address)
+  const url = "/weather?address=" + encodeURIComponent(address)
   fetch(url)
     .then(response => response.json())
     .then((data) => {
