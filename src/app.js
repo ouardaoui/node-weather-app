@@ -5,6 +5,7 @@ const forecast = require("../utils/forecast")
 const geolocation = require("../utils/geolocation")
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // define a path for express templates
 const publicDirPath = path.join(__dirname, '../public')
@@ -68,6 +69,6 @@ app.get("*", (req, res) => {
   })
 })
 
-app.listen(3000, () => {
-  console.log("Serve in up to port 3000")
+app.listen(port, () => {
+  console.log("Serve in up to port" + port)
 })
